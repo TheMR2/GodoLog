@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://c30qx0npai8xt"]
+
+[ext_resource type="Script" uid="uid://bhwn70uydiq3b" path="res://addons/godoLog/example.gd" id="1_rfufb"]
+[ext_resource type="Script" uid="uid://ytrpyhypjul" path="res://addons/godoLog/tab_container.gd" id="2_872ek"]
+[ext_resource type="Script" uid="uid://6nj5rsepxf3t" path="res://addons/godoLog/menu.gd" id="2_nv2e7"]
+[ext_resource type="Script" uid="uid://dxuq24pi4x1jj" path="res://addons/godoLog/signals.gd" id="3_lf3ms"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj7th"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 1
+border_color = Color(0.42485252, 0.42485252, 0.42485252, 1)
+expand_margin_bottom = 5.0
+
+[sub_resource type="DPITexture" id="DPITexture_t5v3a"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[node name="Example" type="Control" unique_id=737703100]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_rfufb")
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1440486738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_872ek")
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=328950237]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -93.5
+offset_right = 197.0
+offset_bottom = 93.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(166, 93)
+script = ExtResource("2_nv2e7")
+
+[node name="Label" type="Label" parent="Menu" unique_id=454247447]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_gj7th")
+text = "GodoLog"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu" unique_id=1332214396]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="CreateNewDialogue" type="Button" parent="Menu" unique_id=155650844]
+layout_mode = 2
+text = "Create New Dialogue"
+icon = SubResource("DPITexture_t5v3a")
+alignment = 0
+
+[node name="OpenDialogueFile" type="Button" parent="Menu" unique_id=1777307428]
+layout_mode = 2
+text = "Open Dialogue File"
+icon = SubResource("DPITexture_t5v3a")
+alignment = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu" unique_id=1068746734]
+layout_mode = 2
+alignment = 1
+
+[node name="Support" type="Button" parent="Menu/HBoxContainer" unique_id=813967658]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Support (one time)"
+icon = SubResource("DPITexture_t5v3a")
+alignment = 0
+
+[node name="Support2" type="Button" parent="Menu/HBoxContainer" unique_id=852201689]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Support (monthly)"
+icon = SubResource("DPITexture_t5v3a")
+alignment = 0
+
+[node name="SeeOtherProjects" type="Button" parent="Menu" unique_id=1034097168]
+layout_mode = 2
+text = "See Other Projects"
+icon = SubResource("DPITexture_t5v3a")
+alignment = 0
+
+[node name="Label2" type="Label" parent="Menu" unique_id=27521480]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
+text = "version:1.0.0"
+horizontal_alignment = 2
+
+[node name="Signals" type="Node" parent="." unique_id=1965091470]
+script = ExtResource("3_lf3ms")
+
+[connection signal="pressed" from="Menu/CreateNewDialogue" to="Menu" method="CreateNewDialogue"]
+[connection signal="pressed" from="Menu/OpenDialogueFile" to="Menu" method="OpenDialogueFile"]
+[connection signal="pressed" from="Menu/HBoxContainer/Support" to="Menu" method="Support"]
+[connection signal="pressed" from="Menu/HBoxContainer/Support2" to="Menu" method="SupportMemperShip"]
+[connection signal="pressed" from="Menu/SeeOtherProjects" to="Menu" method="SeeOtherProjects"]

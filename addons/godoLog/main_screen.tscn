@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://blkrtpnufn8fo"]
+
+[node name="MainScreen" type="Node2D" unique_id=602206938]
+
+[node name="GraphEdit" type="GraphEdit" parent="." unique_id=1872183650]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

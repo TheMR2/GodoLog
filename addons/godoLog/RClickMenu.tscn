@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bu23my0iswova"]
+
+[ext_resource type="Script" uid="uid://cnse25wyarpnf" path="res://addons/godoLog/r_click_menu.gd" id="1_upgvg"]
+
+[node name="RClickMenu" type="VBoxContainer" unique_id=656577019]
+anchors_preset = -1
+anchor_right = 0.109000005
+anchor_bottom = 0.193
+offset_right = -0.5680084
+offset_bottom = -0.06400299
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upgvg")
+
+[node name="Dialogue" type="Button" parent="." unique_id=1037302054]
+layout_mode = 2
+text = "Dialogue"
+
+[node name="StartDialogue" type="Button" parent="." unique_id=898701445]
+layout_mode = 2
+text = "Start DIalogue"
+
+[node name="EndDialogue" type="Button" parent="." unique_id=1365302322]
+layout_mode = 2
+text = "End Dialogue"

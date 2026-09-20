@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://5eisatpm2xkj"]
+
+[ext_resource type="Script" uid="uid://dlm653v5ris58" path="res://addons/godoLog/Graph/graph.gd" id="1_8psup"]
+
+[sub_resource type="DPITexture" id="DPITexture_t5v3a"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[node name="Graph" type="GraphEdit" unique_id=1824650123]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8psup")
+
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=917560672]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 90.0
+offset_bottom = 84.0
+
+[node name="NewDialogue" type="Button" parent="Buttons" unique_id=2034794887]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("DPITexture_t5v3a")
+icon_alignment = 1
+
+[node name="Save" type="Button" parent="Buttons" unique_id=190143416]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("DPITexture_t5v3a")
+icon_alignment = 1
+
+[node name="Close" type="Button" parent="Buttons" unique_id=433379925]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("DPITexture_t5v3a")
+icon_alignment = 1

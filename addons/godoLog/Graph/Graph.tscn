@@ -12,28 +12,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+panning_scheme = 1
 script = ExtResource("1_8psup")
 
-[node name="Buttons" type="HBoxContainer" parent="." unique_id=917560672]
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=1798376834]
+z_index = 346
 layout_mode = 0
 offset_left = 10.0
 offset_top = 60.0
 offset_right = 90.0
 offset_bottom = 84.0
 
-[node name="NewDialogue" type="Button" parent="Buttons" unique_id=2034794887]
+[node name="NewDialogue" type="Button" parent="Buttons" unique_id=1141501953]
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("DPITexture_t5v3a")
 icon_alignment = 1
 
-[node name="Save" type="Button" parent="Buttons" unique_id=190143416]
+[node name="Save" type="Button" parent="Buttons" unique_id=1327321397]
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("DPITexture_t5v3a")
 icon_alignment = 1
 
-[node name="Close" type="Button" parent="Buttons" unique_id=433379925]
+[node name="Close" type="Button" parent="Buttons" unique_id=1432109222]
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("DPITexture_t5v3a")

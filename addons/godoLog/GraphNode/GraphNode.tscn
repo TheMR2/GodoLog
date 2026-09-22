@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://hvk1isse1jkg"]
+
+[ext_resource type="Script" uid="uid://dfgc3k122jq6i" path="res://addons/godoLog/GraphNode/graph_node.gd" id="1_6cxdq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cxdq"]
+content_margin_left = 18.0
+content_margin_top = 12.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0.325, 0.325, 0.325, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hbc5g"]
+
+[node name="GraphNode" type="GraphNode" unique_id=2020382812]
+anchors_preset = -1
+anchor_right = 0.21700001
+anchor_bottom = 0.231
+offset_right = 0.015991211
+offset_bottom = 0.31199646
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel_focus = SubResource("StyleBoxFlat_6cxdq")
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 1
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_6cxdq")
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1537245665]
+layout_mode = 2
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=783489441]
+tree_root = SubResource("AnimationNodeStateMachine_hbc5g")

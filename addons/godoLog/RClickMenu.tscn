@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cnse25wyarpnf" path="res://addons/godoLog/r_click_menu.gd" id="1_upgvg"]
 
-[node name="RClickMenu" type="VBoxContainer" unique_id=656577019]
+[node name="RClickMenu" type="VBoxContainer" unique_id=1560492475]
 anchors_preset = -1
 anchor_right = 0.109000005
 anchor_bottom = 0.193

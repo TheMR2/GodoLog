@@ -28,20 +28,22 @@ func Close():
 
 var lastName:String
 var mouseEntered:bool
+var right_click_pos:Vector2
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			right_click_pos = get_local_mouse_position()
 			var RCMInst = RClickMenu.instantiate()
-			for child in get_children():
-				if child.name == lastName:
-					child.Pos = get_local_mouse_position()
-					child.global_position = get_local_mouse_position()
-					return
-			RCMInst.Pos = get_local_mouse_position()
-			RCMInst.global_position = get_local_mouse_position()
+			RCMInst.click_pos = right_click_pos
+			#for child in get_children():
+				#if child.name == lastName:
+					#right_click_pos = get_viewport().get_mouse_position()
+					#child.click_pos = right_click_pos
+					#child.global_position = get_global_mouse_position()
+					#return
 			add_child(RCMInst)
+			RCMInst.global_position = get_global_mouse_position()
 			lastName = RCMInst.name
-			print(RCMInst.Pos)
 			pass
 		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			for child in get_children():

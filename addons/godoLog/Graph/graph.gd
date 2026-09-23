@@ -35,12 +35,12 @@ func _input(event: InputEvent) -> void:
 			right_click_pos = get_local_mouse_position()
 			var RCMInst = RClickMenu.instantiate()
 			RCMInst.click_pos = right_click_pos
-			#for child in get_children():
-				#if child.name == lastName:
-					#right_click_pos = get_viewport().get_mouse_position()
-					#child.click_pos = right_click_pos
-					#child.global_position = get_global_mouse_position()
-					#return
+			for child in get_children():
+				if child.name == lastName:
+					right_click_pos = get_local_mouse_position()
+					child.global_position = get_global_mouse_position()
+					child.click_pos = right_click_pos
+					return
 			add_child(RCMInst)
 			RCMInst.global_position = get_global_mouse_position()
 			lastName = RCMInst.name

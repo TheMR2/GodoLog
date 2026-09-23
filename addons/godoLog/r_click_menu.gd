@@ -18,6 +18,7 @@ func NormalDialogue():
 	var graph_edit = get_parent()
 	graph_edit.add_child(nodeInst)
 	nodeInst.position_offset = (click_pos + graph_edit.scroll_offset) / graph_edit.zoom
+	queue_free()
 	pass
 func StartDialogue():
 	var graphNode = preload("res://addons/godoLog/GraphNode/StarterGraphNode.tscn")
@@ -25,6 +26,7 @@ func StartDialogue():
 	var graph_edit = get_parent()
 	graph_edit.add_child(nodeInst)
 	nodeInst.position_offset = (click_pos + graph_edit.scroll_offset) / graph_edit.zoom
+	queue_free()
 	pass
 func EndDialogue():
 	var graphNode = preload("res://addons/godoLog/GraphNode/EndGraphNode.tscn")
@@ -32,4 +34,5 @@ func EndDialogue():
 	var graph_edit = get_parent()
 	graph_edit.add_child(nodeInst)
 	nodeInst.position_offset = (click_pos + graph_edit.scroll_offset) / graph_edit.zoom
+	queue_free()
 	pass

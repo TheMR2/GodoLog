@@ -2,24 +2,33 @@
 
 [ext_resource type="Script" uid="uid://cnse25wyarpnf" path="res://addons/godoLog/r_click_menu.gd" id="1_upgvg"]
 
-[node name="RClickMenu" type="VBoxContainer" unique_id=1560492475]
+[node name="Panel" type="Panel" unique_id=783074707]
 anchors_preset = -1
-anchor_right = 0.109000005
-anchor_bottom = 0.193
-offset_right = -0.5680084
-offset_bottom = -0.06400299
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.13000001
+anchor_bottom = 0.156
+offset_right = 0.23999023
+offset_bottom = 23.911995
 script = ExtResource("1_upgvg")
 
-[node name="Dialogue" type="Button" parent="." unique_id=1037302054]
-layout_mode = 2
-text = "Dialogue"
+[node name="RClickMenu" type="VBoxContainer" parent="." unique_id=1560492475]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="StartDialogue" type="Button" parent="." unique_id=898701445]
+[node name="StartDialogue" type="Button" parent="RClickMenu" unique_id=898701445]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Start DIalogue"
 
-[node name="EndDialogue" type="Button" parent="." unique_id=1365302322]
+[node name="Dialogue" type="Button" parent="RClickMenu" unique_id=1037302054]
 layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue"
+
+[node name="EndDialogue" type="Button" parent="RClickMenu" unique_id=1365302322]
+layout_mode = 2
+size_flags_vertical = 3
 text = "End Dialogue"

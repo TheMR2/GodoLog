@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://hvk1isse1jkg"]
 
 [ext_resource type="Script" uid="uid://dfgc3k122jq6i" path="res://addons/godoLog/GraphNode/graph_node.gd" id="1_6cxdq"]
+[ext_resource type="Script" uid="uid://s0rhi30xa4h6" path="res://addons/godoLog/GraphNode/LoadButton/load_button.gd" id="2_hbc5g"]
 
 [node name="GraphNode" type="GraphNode" unique_id=2020382812]
 anchors_preset = -1
-anchor_right = 0.21700001
-anchor_bottom = 0.231
-offset_right = 0.015991211
-offset_bottom = 0.31199646
+anchor_right = 0.186
+anchor_bottom = 0.82900006
+offset_right = -0.27200317
+offset_bottom = -0.1920166
 size_flags_horizontal = 3
 size_flags_vertical = 3
 resizable = true
-title = "Start"
+title = "Dialogue Node"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color(1, 1, 1, 1)
@@ -75,7 +76,7 @@ slot/6/right_type = 0
 slot/6/right_color = Color(1, 1, 1, 1)
 slot/6/right_icon = null
 slot/6/draw_stylebox = true
-slot/7/left_enabled = false
+slot/7/left_enabled = true
 slot/7/left_type = 0
 slot/7/left_color = Color(1, 1, 1, 1)
 slot/7/left_icon = null
@@ -120,6 +121,24 @@ slot/11/right_type = 0
 slot/11/right_color = Color(1, 1, 1, 1)
 slot/11/right_icon = null
 slot/11/draw_stylebox = true
+slot/12/left_enabled = false
+slot/12/left_type = 0
+slot/12/left_color = Color(1, 1, 1, 1)
+slot/12/left_icon = null
+slot/12/right_enabled = false
+slot/12/right_type = 0
+slot/12/right_color = Color(1, 1, 1, 1)
+slot/12/right_icon = null
+slot/12/draw_stylebox = true
+slot/13/left_enabled = false
+slot/13/left_type = 0
+slot/13/left_color = Color(1, 1, 1, 1)
+slot/13/left_icon = null
+slot/13/right_enabled = false
+slot/13/right_type = 0
+slot/13/right_color = Color(1, 1, 1, 1)
+slot/13/right_icon = null
+slot/13/draw_stylebox = true
 script = ExtResource("1_6cxdq")
 
 [node name="Speaker(title)" type="Label" parent="." unique_id=1197537504]
@@ -167,3 +186,13 @@ text = "Dialogue color :"
 [node name="DialogueColor" type="ColorPickerButton" parent="." unique_id=1707137231]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+
+[node name="AudioPath(title)" type="Label" parent="." unique_id=550734349]
+layout_mode = 2
+text = "Audio Path :"
+
+[node name="AudioPath" type="Button" parent="." unique_id=1547140187]
+layout_mode = 2
+text = "<empty>"
+script = ExtResource("2_hbc5g")
+metadata/_custom_type_script = "uid://s0rhi30xa4h6"

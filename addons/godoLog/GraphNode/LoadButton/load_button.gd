@@ -2,6 +2,8 @@
 extends Button
 class_name LoadButton
 var window : FileDialog
+func _init() -> void:
+	text = "<empty>"
 func _pressed() -> void:
 	window = FileDialog.new()
 	window.file_selected.connect(fileSelected)

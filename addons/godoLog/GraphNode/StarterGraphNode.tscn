@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d4ktsx4nw104"]
+
+[ext_resource type="Script" uid="uid://dfgc3k122jq6i" path="res://addons/godoLog/GraphNode/graph_node.gd" id="1_s70v7"]
+
+[node name="GraphNode" type="GraphNode" unique_id=2020382812]
+anchors_preset = -1
+anchor_right = 0.21700001
+anchor_bottom = 0.231
+offset_right = 0.015991211
+offset_bottom = 0.31199646
+size_flags_horizontal = 3
+size_flags_vertical = 3
+resizable = true
+title = "Starter Node"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 1
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = true
+slot/1/right_type = 1
+slot/1/right_color = Color(0, 1, 0, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("1_s70v7")
+
+[node name="Label" type="Label" parent="." unique_id=164313025]
+layout_mode = 2
+text = "Panel animation :"
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=1394724504]
+layout_mode = 2

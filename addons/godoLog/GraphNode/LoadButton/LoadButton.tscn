@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://byuxs2cgaqps"]
+
+[ext_resource type="Script" uid="uid://s0rhi30xa4h6" path="res://addons/godoLog/GraphNode/LoadButton/load_button.gd" id="1_ooh6k"]
+
+[node name="LoadButton" type="Button" unique_id=136028714]
+anchors_preset = -1
+anchor_right = 0.109000005
+anchor_bottom = 0.048
+offset_right = 0.43199158
+offset_bottom = -0.10400009
+text = "<empty>"
+script = ExtResource("1_ooh6k")

@@ -63,3 +63,31 @@ func _on_mouse_exited() -> void:
 func _on_mouse_entered() -> void:
 	mouseEntered = true
 	pass # Replace with function body.
+
+
+func _on_connection_drag_started(from_node: StringName, from_port: int, is_output: bool) -> void:
+	pass # Replace with function body.
+
+
+func _on_connection_drag_ended() -> void:
+	pass # Replace with function body.
+
+
+func _on_connection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+	connect_node(from_node,from_port,to_node,to_port)
+	pass # Replace with function body.
+
+
+func _on_disconnection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
+	disconnect_node(from_node,from_port,to_node,to_port)
+	print("Cool")
+	pass # Replace with function body.
+
+
+func _on_paste_nodes_request() -> void:
+	print("Paste")
+	pass # Replace with function body.
+
+
+func _on_copy_nodes_request() -> void:
+	pass # Replace with function body.

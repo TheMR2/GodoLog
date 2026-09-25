@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+right_disconnects = true
 script = ExtResource("1_8psup")
 
 [node name="Buttons" type="HBoxContainer" parent="." unique_id=1798376834]
@@ -40,5 +41,11 @@ size_flags_horizontal = 3
 icon = SubResource("DPITexture_t5v3a")
 icon_alignment = 1
 
+[connection signal="connection_drag_ended" from="." to="." method="_on_connection_drag_ended"]
+[connection signal="connection_drag_started" from="." to="." method="_on_connection_drag_started"]
+[connection signal="connection_request" from="." to="." method="_on_connection_request"]
+[connection signal="copy_nodes_request" from="." to="." method="_on_copy_nodes_request"]
+[connection signal="disconnection_request" from="." to="." method="_on_disconnection_request"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="paste_nodes_request" from="." to="." method="_on_paste_nodes_request"]

@@ -23,6 +23,7 @@ Signals="*uid://dxuq24pi4x1jj"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/vsync/vsync_mode=2
 
 [editor_plugins]
 

@@ -2,7 +2,7 @@
 extends GraphEdit
 
 signal closed
-
+var nodeSelected
 var graph = preload("res://addons/godoLog/Graph/Graph.tscn")
 var RClickMenu = preload("res://addons/godoLog/RClickMenu.tscn")
 @onready var new_dialogue: Button = $Buttons/NewDialogue
@@ -80,14 +80,26 @@ func _on_connection_request(from_node: StringName, from_port: int, to_node: Stri
 
 func _on_disconnection_request(from_node: StringName, from_port: int, to_node: StringName, to_port: int) -> void:
 	disconnect_node(from_node,from_port,to_node,to_port)
-	print("Cool")
+	
 	pass # Replace with function body.
 
 
 func _on_paste_nodes_request() -> void:
-	print("Paste")
+	var dupNode = get_parent().node.duplicate() 
+	add_child(dupNode)
+	dupNode.position_offset = (get_local_mouse_position() + scroll_offset) / zoom
 	pass # Replace with function body.
 
 
 func _on_copy_nodes_request() -> void:
+	get_parent().node = nodeSelected
+	pass # Replace with function body.
+
+func _on_cut_nodes_request() -> void:
+	get_parent().node = nodeSelected.duplicate()
+	nodeSelected.queue_free()
+	pass # Replace with function body.
+
+func _on_node_selected(node: Node) -> void:
+	nodeSelected = node
 	pass # Replace with function body.

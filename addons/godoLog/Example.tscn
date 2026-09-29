@@ -11,7 +11,7 @@ border_width_bottom = 1
 border_color = Color(0.42485252, 0.42485252, 0.42485252, 1)
 expand_margin_bottom = 5.0
 
-[sub_resource type="DPITexture" id="DPITexture_t5v3a"]
+[sub_resource type="DPITexture" id="DPITexture_872ek"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
 "
 
@@ -64,13 +64,13 @@ layout_mode = 2
 [node name="CreateNewDialogue" type="Button" parent="Menu" unique_id=155650844]
 layout_mode = 2
 text = "Create New Dialogue"
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_872ek")
 alignment = 0
 
 [node name="OpenDialogueFile" type="Button" parent="Menu" unique_id=1777307428]
 layout_mode = 2
 text = "Open Dialogue File"
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_872ek")
 alignment = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu" unique_id=1068746734]
@@ -81,20 +81,20 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Support (one time)"
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_872ek")
 alignment = 0
 
 [node name="Support2" type="Button" parent="Menu/HBoxContainer" unique_id=852201689]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Support (monthly)"
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_872ek")
 alignment = 0
 
 [node name="SeeOtherProjects" type="Button" parent="Menu" unique_id=1034097168]
 layout_mode = 2
 text = "See Other Projects"
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_872ek")
 alignment = 0
 
 [node name="Label2" type="Label" parent="Menu" unique_id=27521480]

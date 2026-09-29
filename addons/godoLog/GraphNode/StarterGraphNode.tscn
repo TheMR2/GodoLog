@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfgc3k122jq6i" path="res://addons/godoLog/GraphNode/graph_node.gd" id="1_s70v7"]
 
-[node name="GraphNode" type="GraphNode" unique_id=2020382812]
+[node name="StarterGraphNode" type="GraphNode" unique_id=2020382812]
 anchors_preset = -1
 anchor_right = 0.21700001
 anchor_bottom = 0.231

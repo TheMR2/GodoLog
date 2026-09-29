@@ -11,7 +11,6 @@ extends Control
 
 
 func _ready() -> void:
-
 	tab_container.connect("Check", childCheck)
 	create_new_dialogue.icon = get_theme_icon("Add","EditorIcons")
 	open_dialogue_file.icon = get_theme_icon("New","EditorIcons")

@@ -5,9 +5,9 @@
 [node name="Panel" type="Panel" unique_id=783074707]
 anchors_preset = -1
 anchor_right = 0.13000001
-anchor_bottom = 0.156
-offset_right = 0.23999023
-offset_bottom = 23.911995
+anchor_bottom = 0.193
+offset_right = 74.23999
+offset_bottom = 83.936
 script = ExtResource("1_upgvg")
 
 [node name="RClickMenu" type="VBoxContainer" parent="." unique_id=1560492475]
@@ -15,6 +15,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 

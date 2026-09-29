@@ -103,3 +103,30 @@ func _on_cut_nodes_request() -> void:
 func _on_node_selected(node: Node) -> void:
 	nodeSelected = node
 	pass # Replace with function body.
+
+
+func _on_test_pressed() -> void:
+	$Window.popup()
+	dialogue()
+	pass # Replace with function body.
+
+
+
+
+
+
+
+
+func dialogue():
+	for node in get_children():
+		if node is GraphNode and node.name == "StarterGraphNode":
+			for detail in get_connection_list():
+				if detail.get("from_node") == "StarterGraphNode":
+					for child in get_children():
+						if child.name == detail.get("to_node"):
+							print(child.get_child(1).text)
+						pass
+					pass
+			pass
+		pass
+	pass

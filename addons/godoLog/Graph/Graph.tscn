@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5eisatpm2xkj"]
 
 [ext_resource type="Script" uid="uid://dlm653v5ris58" path="res://addons/godoLog/Graph/graph.gd" id="1_8psup"]
+[ext_resource type="Script" uid="uid://bftlabnggjolc" path="res://addons/godoLog/Graph/DialogueWindow.gd" id="2_8psup"]
 
 [sub_resource type="DPITexture" id="DPITexture_t5v3a"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
@@ -41,6 +42,41 @@ size_flags_horizontal = 3
 icon = SubResource("DPITexture_t5v3a")
 icon_alignment = 1
 
+[node name="Test" type="Button" parent="." unique_id=174830635]
+layout_mode = 0
+offset_top = 591.0
+offset_right = 147.0
+offset_bottom = 640.0
+text = "Try Dialogue"
+
+[node name="Window" type="Window" parent="." unique_id=951891873]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(500, 350)
+visible = false
+script = ExtResource("2_8psup")
+
+[node name="Label" type="Label" parent="Window" unique_id=581596352]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Next" type="Button" parent="Window/Label" unique_id=1447428531]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 136.0
+offset_right = 253.0
+offset_bottom = 167.0
+text = "Next"
+
 [connection signal="connection_drag_ended" from="." to="." method="_on_connection_drag_ended"]
 [connection signal="connection_drag_started" from="." to="." method="_on_connection_drag_started"]
 [connection signal="connection_request" from="." to="." method="_on_connection_request"]
@@ -51,3 +87,5 @@ icon_alignment = 1
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="node_selected" from="." to="." method="_on_node_selected"]
 [connection signal="paste_nodes_request" from="." to="." method="_on_paste_nodes_request"]
+[connection signal="pressed" from="Test" to="." method="_on_test_pressed"]
+[connection signal="pressed" from="Window/Label/Next" to="Window" method="_on_next_pressed"]

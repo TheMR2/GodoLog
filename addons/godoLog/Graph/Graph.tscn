@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dlm653v5ris58" path="res://addons/godoLog/Graph/graph.gd" id="1_8psup"]
 [ext_resource type="Script" uid="uid://bftlabnggjolc" path="res://addons/godoLog/Graph/DialogueWindow.gd" id="2_8psup"]
 
-[sub_resource type="DPITexture" id="DPITexture_t5v3a"]
+[sub_resource type="DPITexture" id="DPITexture_8psup"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
 "
 
@@ -13,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scroll_offset = Vector2(-525, -310)
 right_disconnects = true
 script = ExtResource("1_8psup")
 
@@ -27,26 +28,27 @@ offset_bottom = 84.0
 [node name="NewDialogue" type="Button" parent="Buttons" unique_id=1141501953]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_8psup")
 icon_alignment = 1
 
 [node name="Save" type="Button" parent="Buttons" unique_id=1327321397]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_8psup")
 icon_alignment = 1
 
 [node name="Close" type="Button" parent="Buttons" unique_id=1432109222]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = SubResource("DPITexture_t5v3a")
+icon = SubResource("DPITexture_8psup")
 icon_alignment = 1
 
 [node name="Test" type="Button" parent="." unique_id=174830635]
 layout_mode = 0
-offset_top = 591.0
-offset_right = 147.0
-offset_bottom = 640.0
+offset_left = 126.0
+offset_top = 51.0
+offset_right = 273.0
+offset_bottom = 100.0
 text = "Try Dialogue"
 
 [node name="Window" type="Window" parent="." unique_id=951891873]
